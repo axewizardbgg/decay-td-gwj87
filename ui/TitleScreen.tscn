@@ -1,0 +1,97 @@
+[gd_scene load_steps=12 format=3 uid="uid://dtkc23ry4yjwq"]
+
+[ext_resource type="Theme" uid="uid://byd85cp2suhid" path="res://theme/pixel.tres" id="1_ddekp"]
+[ext_resource type="Texture2D" uid="uid://dh538ovd7wn6q" path="res://sprites/Wizard Text.png" id="1_xvltj"]
+[ext_resource type="Texture2D" uid="uid://o6kdfb0r837t" path="res://sprites/Title Screen2_background.png" id="2_ddekp"]
+[ext_resource type="Script" uid="uid://cggt4h8mpx0rh" path="res://ui/title_screen.gd" id="2_kqn05"]
+[ext_resource type="Texture2D" uid="uid://d4k75twqy2kfm" path="res://sprites/Title.png" id="4_p7j3k"]
+[ext_resource type="AudioStream" uid="uid://bucfunlth3eua" path="res://sounds/WizardBreakdancer.mp3" id="6_kqn05"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_revie"]
+atlas = ExtResource("1_xvltj")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vb5xd"]
+atlas = ExtResource("1_xvltj")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rgvgt"]
+atlas = ExtResource("1_xvltj")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jt4vm"]
+atlas = ExtResource("1_xvltj")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5k2b2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_revie")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vb5xd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rgvgt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jt4vm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="TitleScreen" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ddekp")
+script = ExtResource("2_kqn05")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 360.0
+color = Color(0.27718404, 0.06820059, 0.067736946, 1)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(433.00003, -50)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_5k2b2")
+autoplay = "default"
+frame_progress = 0.07198202
+centered = false
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 640.0
+offset_bottom = 360.0
+texture = ExtResource("2_ddekp")
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 13.0
+offset_right = 464.0
+offset_bottom = 164.0
+texture = ExtResource("4_p7j3k")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 325.0
+offset_top = 305.0
+offset_right = 500.0
+offset_bottom = 338.0
+text = "OMG CLICK ME"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_kqn05")
+autoplay = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://d0ull577y1t11"]
+
+[ext_resource type="Texture2D" uid="uid://xkrivoh80mcs" path="res://sprites/fireball.png" id="1_lm51b"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bxpe6"]
+atlas = ExtResource("1_lm51b")
+region = Rect2(0, 0, 13, 3)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ry0yq"]
+atlas = ExtResource("1_lm51b")
+region = Rect2(0, 3, 13, 3)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sna0u"]
+atlas = ExtResource("1_lm51b")
+region = Rect2(0, 6, 13, 3)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ae61j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bxpe6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ry0yq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sna0u")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Fireball" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_ae61j")

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="TowerData" load_steps=2 format=3 uid="uid://bdcmgrub604ky"]
+
+[ext_resource type="Script" uid="uid://beikitx3pgf4d" path="res://resources/towers/towerdata.gd" id="1_0i0do"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_0i0do")
+animation_name = "e_skele_archer"
+behavior = "arrow"
+life = 30.0
+damage = 4.0
+action_interval = 2.0
+required_resources = {
+"bones": 75,
+"magic": 0,
+"steel": 5
+}
+title = "Skeleton Archer"
+description = "Stationary ranged unit, rains arrows upon enemies within their range. Probably will be the backbone of your undead army."
+metadata/_custom_type_script = "uid://beikitx3pgf4d"

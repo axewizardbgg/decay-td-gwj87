@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CreepData" load_steps=2 format=3 uid="uid://c8mi6m7m3uach"]
+
+[ext_resource type="Script" uid="uid://dmbg6cnkox31b" path="res://resources/creeps/creepdata.gd" id="1_j6a8u"]
+
+[resource]
+script = ExtResource("1_j6a8u")
+spd = 45.0
+carried_light = 2
+damage = 3.0
+experience = 15.0
+drop = {
+"bones": [50, 75],
+"magic": [0, 0],
+"steel": [0, 3]
+}
+metadata/_custom_type_script = "uid://dmbg6cnkox31b"

@@ -1,0 +1,43 @@
+[gd_scene load_steps=6 format=3 uid="uid://dj1ykytrpsfyr"]
+
+[ext_resource type="Script" uid="uid://25lbt0sr376a" path="res://creep.gd" id="1_sjm2x"]
+[ext_resource type="PackedScene" uid="uid://dtami01pmdpuq" path="res://animated_sprite_2d.tscn" id="2_dhwta"]
+[ext_resource type="Theme" uid="uid://byd85cp2suhid" path="res://theme/pixel.tres" id="3_mue5g"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dhwta"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mue5g"]
+
+[node name="Creep" type="PathFollow2D"]
+z_as_relative = false
+y_sort_enabled = true
+scale = Vector2(2, 2)
+rotates = false
+loop = false
+script = ExtResource("1_sjm2x")
+
+[node name="AnimatedSprite2D" parent="." instance=ExtResource("2_dhwta")]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_dhwta")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -8.0
+offset_top = -18.0
+offset_right = 8.0
+offset_bottom = -16.0
+mouse_filter = 2
+theme = ExtResource("3_mue5g")
+theme_type_variation = &"ProgressBarRed"
+show_percentage = false
+
+[node name="Area2D2" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+shape = SubResource("CircleShape2D_mue5g")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

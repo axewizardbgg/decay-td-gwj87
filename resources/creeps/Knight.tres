@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CreepData" load_steps=2 format=3 uid="uid://mm02jdg2xnw2"]
+
+[ext_resource type="Script" uid="uid://dmbg6cnkox31b" path="res://resources/creeps/creepdata.gd" id="1_baj3b"]
+
+[resource]
+script = ExtResource("1_baj3b")
+animation_name = "h_knight"
+life = 75.0
+spd = 25.0
+carried_light = 3
+damage = 5.0
+experience = 25.0
+drop = {
+"bones": [75, 100],
+"magic": [0, 0],
+"steel": [25, 30]
+}
+metadata/_custom_type_script = "uid://dmbg6cnkox31b"

@@ -1,0 +1,209 @@
+[gd_scene load_steps=20 format=3 uid="uid://bemnejfd3lgsd"]
+
+[ext_resource type="Theme" uid="uid://byd85cp2suhid" path="res://theme/pixel.tres" id="1_ipgfn"]
+[ext_resource type="Script" uid="uid://brdjqxf8ngwaw" path="res://ui/levelup.gd" id="2_wk36j"]
+[ext_resource type="Texture2D" uid="uid://bgy1eo6fjps1w" path="res://sprites/Booty-Shake-Spell.png" id="3_j5rfs"]
+[ext_resource type="Texture2D" uid="uid://cdo7vov4u8d2m" path="res://sprites/Break-dance Fo-Wizzle.png" id="4_butdn"]
+[ext_resource type="Texture2D" uid="uid://47iroulsdjki" path="res://sprites/Dizzy Fo-Wizzy.png" id="5_3qt7w"]
+[ext_resource type="AudioStream" uid="uid://d4ektbbamwnmt" path="res://sounds/levelup.mp3" id="6_butdn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oiwln"]
+atlas = ExtResource("3_j5rfs")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vanj"]
+atlas = ExtResource("3_j5rfs")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rhnrb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oiwln")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vanj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3uss"]
+atlas = ExtResource("4_butdn")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_doxib"]
+atlas = ExtResource("4_butdn")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1asv"]
+atlas = ExtResource("4_butdn")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jkju5"]
+atlas = ExtResource("4_butdn")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_32jil"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3uss")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_doxib")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l1asv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jkju5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hh38u"]
+atlas = ExtResource("5_3qt7w")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbyfv"]
+atlas = ExtResource("5_3qt7w")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_46p0h"]
+atlas = ExtResource("5_3qt7w")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i7agy"]
+atlas = ExtResource("5_3qt7w")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nnj0i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hh38u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sbyfv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46p0h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i7agy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Levelup" type="Control"]
+process_mode = 3
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_ipgfn")
+script = ExtResource("2_wk36j")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -150.0
+offset_right = 150.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 253.0
+offset_top = 33.0
+offset_right = 383.0
+offset_bottom = 60.0
+theme_override_font_sizes/font_size = 24
+text = "Level Up!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CC" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBC" type="VBoxContainer" parent="CC"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Label2" type="Label" parent="CC/VBC"]
+layout_mode = 2
+text = "Make your choice..."
+horizontal_alignment = 1
+
+[node name="Buttons" type="VBoxContainer" parent="CC/VBC"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(200, 60)
+scale = Vector2(-3, 3)
+sprite_frames = SubResource("SpriteFrames_rhnrb")
+autoplay = "default"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(440, 60)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_rhnrb")
+autoplay = "default"
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+position = Vector2(440, 180)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_32jil")
+autoplay = "default"
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="."]
+position = Vector2(200, 300)
+scale = Vector2(-3, 3)
+sprite_frames = SubResource("SpriteFrames_nnj0i")
+autoplay = "default"
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="."]
+position = Vector2(440, 300)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_nnj0i")
+autoplay = "default"
+
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="."]
+position = Vector2(200, 180)
+scale = Vector2(-3, 3)
+sprite_frames = SubResource("SpriteFrames_32jil")
+autoplay = "default"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_butdn")
+volume_db = -5.725
+autoplay = true
+
+[node name="MouseShield" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

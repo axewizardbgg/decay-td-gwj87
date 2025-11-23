@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CreepData" load_steps=2 format=3 uid="uid://bjwc0yvfr72h"]
+
+[ext_resource type="Script" uid="uid://dmbg6cnkox31b" path="res://resources/creeps/creepdata.gd" id="1_824n3"]
+
+[resource]
+script = ExtResource("1_824n3")
+animation_name = "h_priest"
+behavior = "heal"
+life = 15.0
+spd = 35.0
+carried_light = 3
+damage = 50.0
+action_interval = 3.0
+experience = 30.0
+drop = {
+"bones": [50, 75],
+"magic": [10, 25],
+"steel": [0, 0]
+}
+metadata/_custom_type_script = "uid://dmbg6cnkox31b"

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CreepData" load_steps=2 format=3 uid="uid://p5qapuov2ndx"]
+
+[ext_resource type="Script" uid="uid://dmbg6cnkox31b" path="res://resources/creeps/creepdata.gd" id="1_8k80u"]
+
+[resource]
+script = ExtResource("1_8k80u")
+animation_name = "h_archer"
+behavior = "arrow"
+life = 10.0
+spd = 40.0
+damage = 5.0
+action_interval = 2.0
+experience = 25.0
+drop = {
+"bones": [75, 95],
+"magic": [0, 0],
+"steel": [5, 10]
+}
+metadata/_custom_type_script = "uid://dmbg6cnkox31b"

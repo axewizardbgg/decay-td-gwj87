@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="TowerData" load_steps=2 format=3 uid="uid://u47kvuqml5i"]
+
+[ext_resource type="Script" uid="uid://beikitx3pgf4d" path="res://resources/towers/towerdata.gd" id="1_ve0bl"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_ve0bl")
+animation_name = "e_purple_mage"
+behavior = "fireball"
+life = 35.0
+damage = 15.0
+action_interval = 3.0
+required_resources = {
+"bones": 150,
+"magic": 25,
+"steel": 0
+}
+title = "Warlock"
+description = "Stationary ranged unit, fires slower than the Skeleton Archer, but hits much harder."
+metadata/_custom_type_script = "uid://beikitx3pgf4d"

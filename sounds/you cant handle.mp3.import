@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bhyo4s0f3fy7k"
+path="res://.godot/imported/you cant handle.mp3-cdc26d13020af51371dc1e1d00e5f139.mp3str"
+
+[deps]
+
+source_file="res://sounds/you cant handle.mp3"
+dest_files=["res://.godot/imported/you cant handle.mp3-cdc26d13020af51371dc1e1d00e5f139.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

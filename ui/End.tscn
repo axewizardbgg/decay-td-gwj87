@@ -1,0 +1,199 @@
+[gd_scene load_steps=20 format=3 uid="uid://cswep73semau4"]
+
+[ext_resource type="Theme" uid="uid://byd85cp2suhid" path="res://theme/pixel.tres" id="1_relyb"]
+[ext_resource type="Texture2D" uid="uid://dsd8bvwdg8k7d" path="res://sprites/End_bg.png" id="2_5uak7"]
+[ext_resource type="Script" uid="uid://df28kko1iteqm" path="res://ui/end.gd" id="2_enlhi"]
+[ext_resource type="Texture2D" uid="uid://47iroulsdjki" path="res://sprites/Dizzy Fo-Wizzy.png" id="3_enlhi"]
+[ext_resource type="Texture2D" uid="uid://cdo7vov4u8d2m" path="res://sprites/Break-dance Fo-Wizzle.png" id="4_m5b5d"]
+[ext_resource type="Texture2D" uid="uid://bgy1eo6fjps1w" path="res://sprites/Booty-Shake-Spell.png" id="5_85m36"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vosq2"]
+atlas = ExtResource("3_enlhi")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cn2i"]
+atlas = ExtResource("3_enlhi")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_glfqh"]
+atlas = ExtResource("3_enlhi")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0am3a"]
+atlas = ExtResource("3_enlhi")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kgrte"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vosq2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5cn2i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_glfqh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0am3a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8o7b"]
+atlas = ExtResource("4_m5b5d")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l8uqo"]
+atlas = ExtResource("4_m5b5d")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yusew"]
+atlas = ExtResource("4_m5b5d")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_87h2y"]
+atlas = ExtResource("4_m5b5d")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wdg86"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o8o7b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l8uqo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yusew")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_87h2y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jyhcj"]
+atlas = ExtResource("5_85m36")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1u10"]
+atlas = ExtResource("5_85m36")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_38jfp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jyhcj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s1u10")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="End" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_relyb")
+script = ExtResource("2_enlhi")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_5uak7")
+
+[node name="CC" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBC" type="VBoxContainer" parent="CC"]
+layout_mode = 2
+
+[node name="Result" type="Label" parent="CC/VBC"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Victory!"
+horizontal_alignment = 1
+
+[node name="Stats" type="Label" parent="CC/VBC"]
+layout_mode = 2
+text = "Stats:
+
+Kills:
+Damage:
+Heals:
+
+Unit Count
+Zombies:
+Skeletons:
+Skeleton Archers:
+Warlocks:
+Demi-Liches:"
+horizontal_alignment = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(35, 36)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_kgrte")
+autoplay = "default"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(609, 31)
+scale = Vector2(-3, 3)
+sprite_frames = SubResource("SpriteFrames_kgrte")
+autoplay = "default"
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+position = Vector2(37, 186)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_wdg86")
+autoplay = "default"
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="."]
+position = Vector2(602, 187)
+scale = Vector2(-3, 3)
+sprite_frames = SubResource("SpriteFrames_wdg86")
+autoplay = "default"
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="."]
+position = Vector2(36, 323)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_38jfp")
+autoplay = "default"
+
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="."]
+position = Vector2(604, 326)
+scale = Vector2(-3, 3)
+sprite_frames = SubResource("SpriteFrames_38jfp")
+autoplay = "default"
+
+[node name="Button" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 463.0
+offset_top = 34.0
+offset_right = 559.0
+offset_bottom = 74.0
+text = "Restart Game"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

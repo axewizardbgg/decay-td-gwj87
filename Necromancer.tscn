@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://dvw07ujn57p1w"]
+
+[ext_resource type="Script" uid="uid://du2besftl0nu8" path="res://necromancer.gd" id="1_cyl2k"]
+[ext_resource type="Texture2D" uid="uid://catwmxt1jftg7" path="res://sprites/necromancer.png" id="2_x2l5m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xinxx"]
+atlas = ExtResource("2_x2l5m")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1h53t"]
+atlas = ExtResource("2_x2l5m")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a1xr4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xinxx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1h53t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Necromancer" type="Node2D"]
+script = ExtResource("1_cyl2k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_a1xr4")

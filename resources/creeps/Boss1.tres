@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CreepData" load_steps=2 format=3 uid="uid://bipr8umuikiuv"]
+
+[ext_resource type="Script" uid="uid://dmbg6cnkox31b" path="res://resources/creeps/creepdata.gd" id="1_tobqo"]
+
+[resource]
+script = ExtResource("1_tobqo")
+animation_name = "b_1"
+behavior = "boss1"
+life = 25000.0
+spd = 15.0
+carried_light = 100
+damage = 20.0
+action_interval = 0.5
+experience = 0.0
+drop = {
+"bones": [0, 0],
+"magic": [0, 0],
+"steel": [0, 0]
+}
+metadata/_custom_type_script = "uid://dmbg6cnkox31b"

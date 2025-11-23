@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="TowerData" load_steps=2 format=3 uid="uid://deud6cq0hfoup"]
+
+[ext_resource type="Script" uid="uid://beikitx3pgf4d" path="res://resources/towers/towerdata.gd" id="1_b5tyb"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_b5tyb")
+animation_name = "e_black_mage"
+behavior = "leech"
+life = 25.0
+damage = 10.0
+action_interval = 5.0
+required_resources = {
+"bones": 216,
+"magic": 150,
+"steel": 25
+}
+title = "Demi Lich"
+description = "Stationary ranged unit, drains the essence of enemies and uses it to heal some of the decay of other minions."
+metadata/_custom_type_script = "uid://beikitx3pgf4d"

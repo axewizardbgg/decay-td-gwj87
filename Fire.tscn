@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3 uid="uid://bmb61qt3ffiih"]
+
+[ext_resource type="Script" uid="uid://b18bpe5brxcvi" path="res://fire.gd" id="1_p7d3r"]
+[ext_resource type="Texture2D" uid="uid://byw2gq8reu4tw" path="res://sprites/bug zapper.png" id="2_p7d3r"]
+[ext_resource type="Theme" uid="uid://byd85cp2suhid" path="res://theme/pixel.tres" id="3_pbexy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbexy"]
+atlas = ExtResource("2_p7d3r")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2j45n"]
+atlas = ExtResource("2_p7d3r")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kefos"]
+atlas = ExtResource("2_p7d3r")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wwqil"]
+atlas = ExtResource("2_p7d3r")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kefos"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbexy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2j45n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kefos")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wwqil")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Fire" type="Node2D"]
+texture_filter = 1
+scale = Vector2(2, 2)
+script = ExtResource("1_p7d3r")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kefos")
+frame_progress = 0.30096003
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -16.0
+offset_top = -22.0
+offset_right = 16.0
+offset_bottom = -18.0
+theme = ExtResource("3_pbexy")
+show_percentage = false

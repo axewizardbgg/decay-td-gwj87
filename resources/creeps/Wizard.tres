@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="CreepData" load_steps=2 format=3 uid="uid://b0fm1u3ltfme3"]
+
+[ext_resource type="Script" uid="uid://dmbg6cnkox31b" path="res://resources/creeps/creepdata.gd" id="1_0rgpx"]
+
+[resource]
+script = ExtResource("1_0rgpx")
+animation_name = "h_wizard"
+behavior = "fireball"
+life = 8.0
+spd = 20.0
+carried_light = 2
+damage = 20.0
+action_interval = 5.0
+experience = 35.0
+drop = {
+"bones": [50, 75],
+"magic": [30, 50],
+"steel": [0, 0]
+}
+metadata/_custom_type_script = "uid://dmbg6cnkox31b"

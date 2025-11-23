@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="TowerData" load_steps=2 format=3 uid="uid://bb5anch7u01nl"]
+
+[ext_resource type="Script" uid="uid://beikitx3pgf4d" path="res://resources/towers/towerdata.gd" id="1_oegpk"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_oegpk")
+life = 50.0
+spd = 15.0
+damage = 2.0
+title = "Zombie"
+description = "Slow, weak, and stupid, but can take a few hits. Useful for slowing the advance of enemies."
+metadata/_custom_type_script = "uid://beikitx3pgf4d"

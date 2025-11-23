@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://d4nq5s21la5ef"]
+
+[ext_resource type="Script" uid="uid://dghwyhlhjxidv" path="res://tower.gd" id="1_arn3v"]
+[ext_resource type="PackedScene" uid="uid://dtami01pmdpuq" path="res://animated_sprite_2d.tscn" id="2_bn6qc"]
+[ext_resource type="Theme" uid="uid://byd85cp2suhid" path="res://theme/pixel.tres" id="3_usulm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bn6qc"]
+radius = 6.0
+
+[node name="Tower" type="Node2D"]
+y_sort_enabled = true
+scale = Vector2(2, 2)
+script = ExtResource("1_arn3v")
+
+[node name="AnimatedSprite2D" parent="." instance=ExtResource("2_bn6qc")]
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 5
+collision_mask = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_bn6qc")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+texture_filter = 1
+offset_left = -8.0
+offset_top = -18.0
+offset_right = 8.0
+offset_bottom = -16.0
+mouse_filter = 2
+theme = ExtResource("3_usulm")
+value = 75.0
+show_percentage = false

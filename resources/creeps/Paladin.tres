@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CreepData" load_steps=2 format=3 uid="uid://cf2fdqobmmhm3"]
+
+[ext_resource type="Script" uid="uid://dmbg6cnkox31b" path="res://resources/creeps/creepdata.gd" id="1_7gaka"]
+
+[resource]
+script = ExtResource("1_7gaka")
+animation_name = "h_paladin"
+life = 250.0
+spd = 25.0
+carried_light = 5
+damage = 10.0
+action_interval = 2.0
+experience = 10.0
+drop = {
+"bones": [75, 125],
+"magic": [10, 20],
+"steel": [25, 50]
+}
+metadata/_custom_type_script = "uid://dmbg6cnkox31b"

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="TowerData" load_steps=2 format=3 uid="uid://jai4f68dxv6e"]
+
+[ext_resource type="Script" uid="uid://beikitx3pgf4d" path="res://resources/towers/towerdata.gd" id="1_8v22f"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_8v22f")
+animation_name = "e_skele"
+life = 35.0
+spd = 45.0
+action_interval = 2.0
+required_resources = {
+"bones": 75,
+"magic": 0,
+"steel": 0
+}
+title = "Skeleton"
+description = "Fast melee unit, useful for chasing enemies. Does more damage than the Zombie, however not as tanky."
+metadata/_custom_type_script = "uid://beikitx3pgf4d"
